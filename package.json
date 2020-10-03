@@ -1,0 +1,23 @@
+{
+	"name": "@mphennum/persist",
+	"version": "0.1.0",
+	"description": "LocalStorage with built in expiration times, listeners, and fallbacks. Automatically shared accross tabs.",
+	"main": "dist/index.js",
+	"scripts": {
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mphennum/persist.git"
+	},
+	"keywords": [
+		"storage",
+		"app",
+		"state"
+	],
+	"author": "mphennum",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mphennum/persist/issues"
+	},
+	"homepage": "https://github.com/mphennum/persist#readme"
+}
