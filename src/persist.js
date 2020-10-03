@@ -79,7 +79,7 @@ persist.set = (key, data, ttl = null) => {
 
 // get
 
-persist.get = (key) => (storage[key]?.data || null);
+persist.get = (key) => (storage[key]?.data ?? null);
 
 // del
 
