@@ -3,7 +3,7 @@ import persist from '../src/persist';
 
 describe('persist', function() {
 
-	describe('#set()', function() {
+	describe('#get() + #set()', function() {
 
 		it('should set strings', function() {
 			let key = 'feanor';
@@ -58,6 +58,22 @@ describe('persist', function() {
 
 			// console.log({ key, data, result });
 			expect(result).to.equal(data);
+		});
+
+	});
+
+	describe('#del()', function() {
+
+		it('should remove values by key', function() {
+			let key = 'feanor';
+			let data = '14';
+
+			persist.set(key, data);
+			persist.del(key);
+			let result = persist.get(key);
+
+			// console.log({ key, data, result });
+			expect(result).to.be.null;
 		});
 
 	});
