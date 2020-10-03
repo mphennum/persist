@@ -78,4 +78,20 @@ describe('persist', function() {
 
 	});
 
+	describe('#clear()', function() {
+
+		it('should remove all values', function() {
+			let key = 'feanor';
+			let data = '14';
+
+			persist.set(key, data);
+			persist.clear();
+			let result = persist.get(key);
+
+			// console.log({ key, data, result });
+			expect(result).to.be.null;
+		});
+
+	});
+
 });
