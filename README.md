@@ -57,11 +57,11 @@ console.log(data); // 14
 Store data identified by a key for a specified period of time.
 
 - params
-	- `key`: `String` - unique identifier
+	- key: `String` - unique identifier
 		- required
-	- `data`: any type - stored data
+	- data: any type - stored data
 		- required
-	- `ttl`: `Number` - time to live (seconds)
+	- ttl: `Number` - time to live (seconds)
 		- optional
 		- default: `null` - never expires
 
@@ -75,9 +75,9 @@ persist.set('feanor', { tengwar: 8 }, 3600); // expires in 1 hour
 Retrieve previously stored data by key. Returns null when no data is found with specified key.
 
 - params
-	- `key`: `String` - unique identifier
+	- key: `String` - unique identifier
 - returns
-	- `data`: any type - stored data
+	- data: any type - stored data
 
 ```js
 var data = persist.get('feanor');
@@ -88,7 +88,7 @@ var data = persist.get('feanor');
 Deletes data stored by key.
 
 - params
-	- `key`: `String` - unique identifier
+	- key: `String` - unique identifier
 
 ```js
 persist.del('feanor');
@@ -108,7 +108,7 @@ Adds an event listener for data changes key.
 
 ```js
 function listener(key, data) {
-
+	// handle data change or deletion
 }
 
 persist.on('feanor', listener);
@@ -120,7 +120,7 @@ Removes an event listener by key.
 
 ```js
 function listener(key, data) {
-
+	// handle data change or deletion
 }
 
 persist.off('feanor', listener);
