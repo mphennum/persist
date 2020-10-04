@@ -94,4 +94,23 @@ describe('persist', function() {
 
 	});
 
+	describe('#on()', function() {
+
+		it('should listen for data updates', function() {
+			let key = 'feanor';
+			let data = '14';
+			let result;
+
+			persist.on(key, (key, data) => {
+				result = data;
+			});
+
+			persist.set(key, data);
+
+			// console.log({ key, data, result });
+			expect(result).to.equal(data);
+		});
+
+	});
+
 });
