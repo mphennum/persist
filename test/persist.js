@@ -113,4 +113,26 @@ describe('persist', function() {
 
 	});
 
+	describe('#off()', function() {
+
+		it('should stop listening for data updates', function() {
+			let key = 'feanor';
+			let data = '14';
+			let result;
+
+			let handler = (key, data) => {
+				result = data;
+			};
+
+			persist.on(key, handler);
+			persist.off(key, handler);
+
+			persist.set(key, data);
+
+			// console.log({ key, data, result });
+			expect(result).to.be.undefined;
+		});
+
+	});
+
 });
