@@ -4,7 +4,9 @@
 	"description": "LocalStorage with built in expiration times, listeners, and fallbacks. Automatically shared accross tabs.",
 	"main": "dist/index.js",
 	"scripts": {
-		"test": "mocha --require esm --require @babel/register,jsdom-global/register"
+		"test": "npm run test:lint && npm run test:unit",
+		"test:lint": "eslint src",
+		"test:unit": "mocha --require esm --require @babel/register,jsdom-global/register"
 	},
 	"repository": {
 		"type": "git",
@@ -27,7 +29,9 @@
 		"@babel/plugin-proposal-optional-chaining": "^7.11.0",
 		"@babel/preset-env": "^7.11.5",
 		"@babel/register": "^7.11.5",
+		"babel-eslint": "^10.1.0",
 		"chai": "^4.2.0",
+		"eslint": "^7.10.0",
 		"esm": "^3.2.25",
 		"jsdom": "16.4.0",
 		"jsdom-global": "3.0.2",
