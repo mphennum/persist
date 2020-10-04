@@ -1,6 +1,6 @@
 {
 	"name": "@mphennum/persist",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "LocalStorage with built in expiration times, listeners, and fallbacks. Automatically shared accross tabs.",
 	"main": "dist/index.js",
 	"scripts": {
