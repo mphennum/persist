@@ -21,7 +21,7 @@ let init = () => {
 				continue;
 			}
 
-			let val = JSON.parse(localStorage.getItem(k));
+			let val = JSON.parse(localStorage.getItem(key));
 			if (!val || (val.exp && now > val.exp)) {
 				localStorage.removeItem(key);
 				continue;
@@ -67,7 +67,7 @@ persist.set = (key, data, ttl = null) => {
 
 	storage[key] = val;
 	try {
-		localStorage?.setItem(KEYPREFIX + key, JSON.stringify(v)); // throws error when localStorage is full
+		localStorage?.setItem(KEYPREFIX + key, JSON.stringify(val)); // throws error when localStorage is full
 	} catch (error) {
 		// do nothing
 	}
