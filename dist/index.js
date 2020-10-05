@@ -175,7 +175,7 @@ persist.off = function (key, cb) {
 
 window.addEventListener('storage', function (_ref) {
   var key = _ref.key,
-      val = _ref.val;
+      val = _ref.newValue;
 
   // console.log('persist event listener', key, val);
   if (!key.startsWith(KEYPREFIX)) {
