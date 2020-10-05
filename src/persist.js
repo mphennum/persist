@@ -124,7 +124,7 @@ persist.off = (key, cb) => {
 
 // tab data sharing
 
-window.addEventListener('storage', ({ key, val }) => {
+window.addEventListener('storage', ({ key, newValue: val }) => {
 	// console.log('persist event listener', key, val);
 	if (!key.startsWith(KEYPREFIX)) {
 		return;
